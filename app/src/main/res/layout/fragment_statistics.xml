@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.EasyLedger.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:gravity="center_vertical">
+
+                    <ImageButton
+                        android:id="@+id/prev_month"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="@string/prev_month"
+                        android:src="@drawable/ic_back" />
+
+                    <TextView
+                        android:id="@+id/month_label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@color/ink"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <ImageButton
+                        android:id="@+id/next_month"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="@string/next_month"
+                        android:rotation="180"
+                        android:src="@drawable/ic_back" />
+                </LinearLayout>
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/include_fixed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/include_fixed" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_pill_income"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="총수입" android:textColor="@color/income_deep" android:textSize="12sp" android:textStyle="bold" />
+                        <TextView android:id="@+id/income_total" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:textColor="@color/income_deep" android:textSize="15sp" android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_pill_expense"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="총지출" android:textColor="@color/expense_deep" android:textSize="12sp" android:textStyle="bold" />
+                        <TextView android:id="@+id/expense_total" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:textColor="@color/expense_deep" android:textSize="15sp" android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_pill_balance"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/balance" android:textColor="@color/info" android:textSize="12sp" android:textStyle="bold" />
+                        <TextView android:id="@+id/balance_total" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:textColor="@color/info" android:textSize="15sp" android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.EasyLedger.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardElevation="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="전월 비교" android:textAppearance="@style/TextAppearance.EasyLedger.Section" />
+                <TextView android:id="@+id/income_change" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:textColor="@color/ink" android:textSize="14sp" />
+                <TextView android:id="@+id/expense_change" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:textColor="@color/ink" android:textSize="14sp" />
+                <TextView android:id="@+id/comparison_range" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textColor="@color/neutral" android:textSize="12sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="일별 수입·지출"
+            android:textAppearance="@style/TextAppearance.EasyLedger.Section" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.EasyLedger.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:cardElevation="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/bar_chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:contentDescription="일별 수입과 지출 막대 그래프" />
+
+                <TextView
+                    android:id="@+id/bar_empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="28dp"
+                    android:text="@string/empty_transactions"
+                    android:textColor="@color/neutral"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="지출 카테고리"
+            android:textAppearance="@style/TextAppearance.EasyLedger.Section" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.EasyLedger.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:cardElevation="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pie_chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:contentDescription="지출 카테고리 비중 도넛 그래프" />
+
+                <TextView
+                    android:id="@+id/pie_empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:text="지출이 없습니다"
+                    android:textColor="@color/neutral"
+                    android:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/category_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="소비 패턴"
+            android:textAppearance="@style/TextAppearance.EasyLedger.Section" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.EasyLedger.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp"
+            app:cardElevation="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView android:id="@+id/average_text" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/ink" android:textSize="14sp" />
+                <TextView android:id="@+id/peak_day" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textColor="@color/ink" android:textSize="14sp" />
+                <TextView android:id="@+id/peak_category" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textColor="@color/ink" android:textSize="14sp" />
+                <TextView android:id="@+id/expense_pattern" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textColor="@color/ink" android:textSize="14sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</ScrollView>

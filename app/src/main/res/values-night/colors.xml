@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="brand">#5ED9CB</color>
+    <color name="brand_deep">#3CB9AB</color>
+    <color name="brand_bright">#7FE8DC</color>
+    <color name="brand_soft">#163936</color>
+    <color name="on_brand">#062826</color>
+
+    <color name="income">#5FDBA3</color>
+    <color name="income_deep">#3EBF86</color>
+    <color name="income_soft">#153528</color>
+    <color name="income_glow">#1F4A38</color>
+
+    <color name="expense">#FF8F84</color>
+    <color name="expense_deep">#E86A5E</color>
+    <color name="expense_soft">#3C221F</color>
+    <color name="expense_glow">#53302C</color>
+
+    <color name="accent">#FFB35C</color>
+    <color name="accent_soft">#3C2C18</color>
+    <color name="info">#7BA6FF</color>
+    <color name="info_soft">#1C2C4A</color>
+    <color name="violet">#B29BFF</color>
+    <color name="violet_soft">#2A2348</color>
+
+    <color name="neutral">#A8B4C0</color>
+    <color name="ink">#F1F5F8</color>
+    <color name="page">#0D1316</color>
+    <color name="page_top">#122421</color>
+    <color name="page_mid">#1A1713</color>
+    <color name="card">#182125</color>
+    <color name="line">#2C393E</color>
+    <color name="key_fill">#223033</color>
+    <color name="key_press">#2A403D</color>
+
+    <color name="calendar_today">#1C3A38</color>
+    <color name="calendar_selected">#285F58</color>
+</resources>

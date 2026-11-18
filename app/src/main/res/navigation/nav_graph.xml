@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inputFragment">
+
+    <fragment
+        android:id="@+id/inputFragment"
+        android:name="com.sunwoo.easyledger.ui.input.InputFragment"
+        android:label="@string/nav_input" />
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.sunwoo.easyledger.ui.calendar.CalendarFragment"
+        android:label="@string/nav_calendar" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.sunwoo.easyledger.ui.history.HistoryFragment"
+        android:label="@string/nav_history" />
+    <fragment
+        android:id="@+id/statisticsFragment"
+        android:name="com.sunwoo.easyledger.ui.statistics.StatisticsFragment"
+        android:label="@string/nav_statistics" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.sunwoo.easyledger.ui.settings.SettingsFragment"
+        android:label="@string/settings" />
+    <fragment
+        android:id="@+id/categoryManageFragment"
+        android:name="com.sunwoo.easyledger.ui.category.CategoryManageFragment"
+        android:label="@string/categories" />
+    <fragment
+        android:id="@+id/fixedListFragment"
+        android:name="com.sunwoo.easyledger.ui.fixed.FixedListFragment"
+        android:label="@string/fixed_menu" />
+    <fragment
+        android:id="@+id/fixedEditFragment"
+        android:name="com.sunwoo.easyledger.ui.fixed.FixedEditFragment"
+        android:label="@string/fixed_menu" />
+    <fragment
+        android:id="@+id/backupFragment"
+        android:name="com.sunwoo.easyledger.ui.settings.BackupFragment"
+        android:label="@string/backup_menu" />
+    <fragment
+        android:id="@+id/appSettingsFragment"
+        android:name="com.sunwoo.easyledger.ui.settings.AppSettingsFragment"
+        android:label="@string/app_settings" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.sunwoo.easyledger.ui.settings.AboutFragment"
+        android:label="@string/about" />
+    <fragment
+        android:id="@+id/transactionEditFragment"
+        android:name="com.sunwoo.easyledger.ui.input.InputFragment"
+        android:label="@string/edit" />
+</navigation>

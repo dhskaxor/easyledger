@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <!-- soft circle plate -->
+    <path
+        android:fillColor="#CFF3EE"
+        android:pathData="M60,8c28.7,0 52,23.3 52,52s-23.3,52 -52,52S8,88.7 8,60 31.3,8 60,8z" />
+    <path
+        android:fillColor="#EAF8F5"
+        android:pathData="M60,16c24.3,0 44,19.7 44,44s-19.7,44 -44,44S16,84.3 16,60 35.7,16 60,16z" />
+
+    <!-- wallet back -->
+    <path
+        android:fillColor="#0A6B62"
+        android:pathData="M28,40h42c4,0 7,3 7,7v10H28c-2.8,0 -5,-2.2 -5,-5v-7c0,-2.8 2.2,-5 5,-5z" />
+    <path
+        android:fillColor="#0D7A70"
+        android:pathData="M23,50h58c4.4,0 8,3.6 8,8v26c0,4.4 -3.6,8 -8,8H23c-4.4,0 -8,-3.6 -8,-8V58c0,-4.4 3.6,-8 8,-8z" />
+    <path
+        android:fillColor="#CFF3EE"
+        android:pathData="M70,62h14c2.8,0 5,2.2 5,5v6c0,2.8 -2.2,5 -5,5H70V62z" />
+    <path
+        android:fillColor="#14A898"
+        android:pathData="M79,67a3,3 0,1 1,0.01 0z" />
+
+    <!-- open ledger -->
+    <path
+        android:fillColor="#065F58"
+        android:pathData="M34,54l22,5v38L34,92z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M36.5,56.8l17.5,4v32.4l-17.5,-4.2z" />
+    <path
+        android:fillColor="#0D7A70"
+        android:pathData="M56,59l24,-5v38l-24,5z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M58.5,60.8l19.5,-4v32.4l-19.5,4.2z" />
+    <!-- ruled lines -->
+    <path
+        android:fillColor="#D0DCE2"
+        android:pathData="M40,64h11v1.8H40zM40,70h11v1.8H40zM40,76h9v1.8H40zM40,82h10v1.8H40zM63,64h12v1.8H63zM63,70h12v1.8H63zM63,76h10v1.8H63z" />
+    <!-- spine -->
+    <path
+        android:fillColor="#14A898"
+        android:pathData="M54.2,57h3.6v38h-3.6z" />
+
+    <!-- gold coin with won -->
+    <path
+        android:fillColor="#C9890E"
+        android:pathData="M82,72a12,12 0,1 1,0.01 0z" />
+    <path
+        android:fillColor="#F0B429"
+        android:pathData="M82,74.5a9.5,9.5 0,1 1,0.01 0z" />
+    <path
+        android:fillColor="#8F5F08"
+        android:pathData="M77.6,71.2h8.8v2H84v1.4h2v2h-2V80h-3.2v-3.4h-2.4v-2h2.4v-1.4h-2.8z" />
+</vector>

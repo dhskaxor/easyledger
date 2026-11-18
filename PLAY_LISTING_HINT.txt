@@ -1,0 +1,9 @@
+Play Console 등록 추천 문구
+========================
+
+앱 이름(스토어 표시): 쉬운가계부
+짧은 설명: 누구나 쉽게 쓰는 오프라인 가계부
+긴 설명 키워드 예: 가계부, 쉬운가계부, 수입지출, 가계부앱, 소비기록, 예산, 달력가계부
+
+기기 아이콘 아래 이름: 쉬운가계부 (app/src/main/res/values/strings.xml app_name)
+패키지 ID: com.sunwoo.easyledger

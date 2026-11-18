@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="유형과 금액"
+            android:textAppearance="@style/TextAppearance.EasyLedger.Section" />
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:layout_marginTop="8dp"
+            android:id="@+id/type_toggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.button.MaterialButton android:id="@+id/type_expense" style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="@string/expense" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/type_income" style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="@string/income" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="이름">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/name_input" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLength="40" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/amount">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/amount_input" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="number" android:maxLength="15" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton android:id="@+id/category_button" style="?attr/materialButtonOutlinedStyle" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/pick_category" />
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/payment_toggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+            <com.google.android.material.button.MaterialButton android:id="@+id/pay_cash" style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="@string/cash" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/pay_card" style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="@string/card" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/recurrence_toggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+            <com.google.android.material.button.MaterialButton android:id="@+id/every_day" style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="매일" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/every_week" style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="매주" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/every_month" style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="매월" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/every_year" style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="매년" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <TextView android:id="@+id/recurrence_description" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingTop="8dp" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/start_button" style="?attr/materialButtonOutlinedStyle" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="시작일" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/end_button" style="?attr/materialButtonOutlinedStyle" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="종료일 없음" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/clear_end" style="?attr/materialButtonOutlinedStyle" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="종료일 지우기" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/active_switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/active" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/save_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/save" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.EasyLedger" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/brand</item>
+        <item name="colorOnPrimary">@color/on_brand</item>
+        <item name="colorSecondary">@color/brand_deep</item>
+        <item name="colorSurface">@color/card</item>
+        <item name="android:colorBackground">@color/page</item>
+        <item name="android:windowBackground">@drawable/bg_page</item>
+        <item name="android:statusBarColor">@color/page_top</item>
+        <item name="android:navigationBarColor">@color/card</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:textColorPrimary">@color/ink</item>
+        <item name="materialButtonOutlinedStyle">@style/Widget.EasyLedger.OutlinedButton</item>
+    </style>
+</resources>
