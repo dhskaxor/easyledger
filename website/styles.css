@@ -273,7 +273,9 @@ a {
 
 .hero-visual {
   position: relative;
-  min-height: 420px;
+  min-height: auto;
+  display: grid;
+  place-items: center;
 }
 
 .phone {
@@ -814,19 +816,21 @@ section {
   border-radius: 32px;
   background: linear-gradient(160deg, #103c37, #065f58 45%, #0d7a70);
   box-shadow: var(--shadow);
+  overflow: hidden;
 }
 
 .shot-frame img {
   width: 100%;
+  height: auto;
   border-radius: 24px;
   background: #eaf7f4;
-  aspect-ratio: 9 / 16;
-  object-fit: cover;
+  object-fit: contain;
   object-position: top center;
+  display: block;
 }
 
 .shot-frame.wide {
-  width: min(100%, 320px);
+  width: min(100%, 300px);
 }
 
 .shot-caption {
@@ -840,12 +844,13 @@ section {
 .shot-rail {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: minmax(200px, 220px);
+  grid-auto-columns: minmax(210px, 240px);
   gap: 18px;
   overflow-x: auto;
   padding: 8px 4px 20px;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+  align-items: start;
 }
 
 .shot-rail::-webkit-scrollbar {
