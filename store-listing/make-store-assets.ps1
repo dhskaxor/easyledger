@@ -111,7 +111,7 @@ $footFont = New-Font "Malgun Gothic" 22 ([System.Drawing.FontStyle]::Bold)
 $fg.DrawString("쉬운가계부", $titleFont, (New-Object System.Drawing.SolidBrush $deep), 56, 108)
 $fg.DrawString("로그인 없이, 오늘 쓴 돈만 가볍게", $subFont, (New-Object System.Drawing.SolidBrush $muted), 56, 188)
 
-$badges = @(@{t="완전 무료"; fill=$deep; ink=$white}, @{t="광고 없음"; fill=$white; ink=$deep}, @{t="오프라인"; fill=$white; ink=$deep})
+$badges = @(@{t="완전 무료"; fill=$deep; ink=$white}, @{t="로그인 없음"; fill=$white; ink=$deep}, @{t="오프라인"; fill=$white; ink=$deep})
 $bx = 56
 foreach ($b in $badges) {
   $fg.FillPath((New-Object System.Drawing.SolidBrush $b.fill), (Get-RoundedRectPath $bx 268 132 44 22))
@@ -192,7 +192,7 @@ $pg.SmoothingMode = [System.Drawing.Drawing2D.SmoothingMode]::AntiAlias
 $pg.TextRenderingHint = [System.Drawing.Text.TextRenderingHint]::ClearTypeGridFit
 $pg.Clear([System.Drawing.Color]::FromArgb(255, 234, 246, 243))
 $pg.FillRectangle($bottom, 0, 1180, 1080, 740)
-$pg.DrawString("로그인 · 광고 없음", $tFont, (New-Object System.Drawing.SolidBrush $deep), (New-Object System.Drawing.RectangleF 40, 120, 1000, 80), $fmt)
+$pg.DrawString("로그인 없이 바로 시작", $tFont, (New-Object System.Drawing.SolidBrush $deep), (New-Object System.Drawing.RectangleF 40, 120, 1000, 80), $fmt)
 $pg.DrawString("기록은 이 폰에만 안전하게 저장돼요", $sFont, (New-Object System.Drawing.SolidBrush $muted), (New-Object System.Drawing.RectangleF 50, 200, 980, 70), $fmt)
 if (Test-Path $welcome) {
   $wimg = [System.Drawing.Image]::FromFile($welcome)

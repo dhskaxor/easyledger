@@ -15,7 +15,7 @@
     <string name="about_hint">버전, 사용법, 문의</string>
     <string name="about_version">버전 %1$s</string>
     <string name="about_intro_title">쉬운가계부를 만나보세요</string>
-    <string name="about_intro_body">로그인 없이, 광고 없이, 이 폰 안에서만 쓰는 가벼운 가계부예요.\n오늘 쓴 돈만 빠르게 남기고, 달력·내역·통계로 한 달을 돌아볼 수 있어요. 반복되는 고정비까지 알아서 챙겨 줍니다.</string>
+    <string name="about_intro_body">로그인 없이, 이 폰 안에서만 쓰는 가벼운 가계부예요.\n오늘 쓴 돈만 빠르게 남기고, 달력·내역·통계로 한 달을 돌아볼 수 있어요. 반복되는 고정비까지 알아서 챙겨 줍니다.</string>
     <string name="about_help_title">주요 화면 안내</string>
     <string name="about_help_input">입력\n수입/지출을 고르고 카테고리를 누르면 금액 키패드가 바로 열립니다.\n· 어제·오늘 버튼과 날짜 화살표로 날짜를 빠르게 바꿀 수 있어요\n· 자주 쓰는 금액 버튼, 00·000 키로 입력이 훨씬 짧아집니다\n· 저장하면 키보드도 함께 닫혀서 다음 입력이 편해요</string>
     <string name="about_help_calendar">달력\n날짜마다 수입·지출이 한눈에 보여요. 날짜를 누르면 그날 내역이 아래에 나옵니다.\n· 오른쪽 아래 + 로 그 날짜에 바로 입력할 수 있고\n· 저장이 끝나면 방금 고른 날짜의 달력으로 다시 돌아갑니다\n· 오늘 버튼으로 이번 달·오늘로 바로 이동할 수 있어요</string>
