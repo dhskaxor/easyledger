@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>사용 방법 — 쉬운가계부</title>
-  <meta name="description" content="쉬운가계부 설치부터 입력, 달력, 위젯까지 사용 방법을 안내합니다." />
+  <meta name="description" content="쉬운가계부 설치부터 입력, 달력, 위젯까지 사용 방법을 화면과 함께 안내합니다." />
   <link rel="icon" href="./assets/icon.png" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&display=swap" />
@@ -21,15 +21,75 @@
       </div>
     </section>
     <section class="page-content">
-      <div class="wrap prose">
-        <div class="steps">
-          <article class="step"><div><h3>설치하고 카테고리 고르기</h3><p>Google Play에서 「쉬운가계부」를 설치한 뒤, 처음 실행에서 자주 쓸 카테고리만 골라 주세요. 나중에 설정에서 더 추가할 수 있어요.</p></div></article>
-          <article class="step"><div><h3>오늘 쓴 돈 남기기</h3><p>입력 탭에서 지출/수입 → 카테고리 → 금액 → 저장. 어제·오늘 버튼과 자주 쓰는 금액으로 더 빠르게 남길 수 있어요.</p></div></article>
-          <article class="step"><div><h3>달력 · 내역으로 돌아보기</h3><p>달력에서 날짜를 누르거나, 내역에서 이번 달 합계와 검색으로 필요한 기록만 모아 보세요.</p></div></article>
-          <article class="step"><div><h3>위젯과 고정비 챙기기</h3><p>홈 화면에 위젯을 추가하고, 설정에서 반복 수입·지출 규칙을 등록해 두면 매일이 더 편해져요.</p></div></article>
-          <article class="step"><div><h3>백업해 두기</h3><p>중요한 시점에는 설정 → 백업에서 파일로 저장해 두세요. 폰을 바꿔도 복원할 수 있어요.</p></div></article>
+      <div class="wrap">
+        <div class="guide-grid">
+          <article class="guide-item">
+            <div class="shot-frame">
+              <img src="./assets/screens/input.png" alt="입력 화면" loading="lazy" />
+            </div>
+            <div>
+              <h3 style="margin:0 0 8px;color:var(--brand-deep)">1. 설치하고 카테고리 고르기</h3>
+              <p style="margin:0;color:var(--muted)">Google Play에서 「쉬운가계부」를 설치한 뒤 앱을 실행하세요. 처음 실행에서는 자주 쓸 카테고리만 골라 주세요. 나중에 설정에서 아이콘·자주 쓰는 금액·숨김까지 더 다듬을 수 있어요.</p>
+            </div>
+          </article>
+
+          <article class="guide-item">
+            <div class="shot-frame">
+              <img src="./assets/screens/input.png" alt="지출 입력 흐름" loading="lazy" />
+            </div>
+            <div>
+              <h3 style="margin:0 0 8px;color:var(--brand-deep)">2. 오늘 쓴 돈 남기기</h3>
+              <p style="margin:0;color:var(--muted)">하단 <strong>입력</strong> 탭에서 지출/수입을 고른 뒤 카테고리를 누르면 금액 키패드가 열립니다. 어제·오늘 버튼, 자주 쓰는 금액, 00·000 키로 입력을 짧게 끝낼 수 있어요. 결제수단과 메모도 같은 화면에서 남깁니다.</p>
+            </div>
+          </article>
+
+          <article class="guide-item">
+            <div class="shot-frame">
+              <img src="./assets/screens/calendar.jpg" alt="달력으로 돌아보기" loading="lazy" />
+            </div>
+            <div>
+              <h3 style="margin:0 0 8px;color:var(--brand-deep)">3. 달력으로 날짜별 확인</h3>
+              <p style="margin:0;color:var(--muted)"><strong>달력</strong> 탭에서 날짜를 누르면 그날 합계와 내역이 보입니다. + 버튼으로 그 날짜에 바로 기록하고, 저장하면 다시 그 날짜 달력으로 돌아옵니다. “그날 얼마 썼지?”를 빠르게 확인할 때 좋아요.</p>
+            </div>
+          </article>
+
+          <article class="guide-item">
+            <div class="shot-frame">
+              <img src="./assets/screens/history.jpg" alt="내역과 검색" loading="lazy" />
+            </div>
+            <div>
+              <h3 style="margin:0 0 8px;color:var(--brand-deep)">4. 내역 · 검색으로 모아 보기</h3>
+              <p style="margin:0;color:var(--muted)"><strong>내역</strong> 상단에는 이번 달 수입·지출·차액이 고정됩니다. 전체/수입/지출 토글과 카테고리·메모·금액·기간·결제수단 검색으로 필요한 기록만 모으세요. 자주 쓰는 조건은 이름으로 저장해 두면 매달 다시 불러올 수 있어요.</p>
+            </div>
+          </article>
+
+          <article class="guide-item">
+            <div class="shot-frame">
+              <img src="./assets/screens/stats.jpg" alt="통계로 결산" loading="lazy" />
+            </div>
+            <div>
+              <h3 style="margin:0 0 8px;color:var(--brand-deep)">5. 통계로 한 달 결산</h3>
+              <p style="margin:0;color:var(--muted)"><strong>통계</strong>에서 기간을 고르면 합계와 카테고리 비중을 볼 수 있어요. 차액은 통장 잔액이 아니라 선택한 기간의 총수입 − 총지출입니다. “이번 달 얼마나 남겼나”를 보는 숫자예요.</p>
+            </div>
+          </article>
+
+          <article class="guide-item">
+            <div class="shot-frame">
+              <img src="./assets/screens/widget.jpg" alt="위젯과 고정비" loading="lazy" />
+            </div>
+            <div>
+              <h3 style="margin:0 0 8px;color:var(--brand-deep)">6. 위젯 · 고정비 · 백업</h3>
+              <p style="margin:0;color:var(--muted)">홈 화면을 길게 눌러 위젯 추가에서 「쉬운가계부」를 넣어 주세요. 오늘 합계와 목록을 보고 ‘입력’·‘달력’으로 바로 이어집니다. 설정에서는 고정비 규칙과 파일 백업/복원을 관리할 수 있어요. 중요한 시점에는 백업을 한 번 남겨 두세요.</p>
+            </div>
+          </article>
         </div>
-        <p style="margin-top:20px">앱 안 <strong>설정 → 앱 정보</strong>에도 같은 안내가 있어요.</p>
+
+        <p style="margin-top:24px;color:var(--muted)">앱 안 <strong>설정 → 앱 정보</strong>에도 같은 안내가 있어요. 막히는 점이 있으면 <a href="mailto:onamt@naver.com">onamt@naver.com</a>으로 보내 주세요.</p>
+
+        <p style="margin-top:20px">
+          <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.sunwoo.easyledger" rel="noopener" target="_blank">Google Play에서 받기</a>
+          <a class="btn btn-ghost" href="./faq.html" style="margin-left:8px">자주 묻는 질문</a>
+        </p>
       </div>
     </section>
   </main>

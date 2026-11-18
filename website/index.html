@@ -39,7 +39,7 @@
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#download">무료로 받기</a>
-            <a class="btn btn-ghost" href="./news.html">새로워진 점 보기</a>
+            <a class="btn btn-ghost" href="#screens">화면 미리보기</a>
             <a class="btn btn-ghost" href="./guide.html">사용 방법</a>
           </div>
           <ul class="checklist">
@@ -52,34 +52,13 @@
           </ul>
         </div>
 
-        <div class="hero-visual" aria-hidden="true">
+        <div class="hero-visual">
           <div class="float-tag a">오늘 지출</div>
           <div class="float-tag b">빠른 입력</div>
           <div class="float-tag c">위젯 · 달력</div>
-          <div class="phone">
-            <div class="phone-screen">
-              <div class="phone-top">
-                <span>오늘 요약</span>
-                <span>3건</span>
-              </div>
-              <div class="phone-row">
-                <div class="mini expense">
-                  <strong>지출</strong>
-                  34,500원
-                </div>
-                <div class="mini income">
-                  <strong>수입</strong>
-                  10,000원
-                </div>
-              </div>
-              <div class="phone-amount">이번 달도 단정하게</div>
-              <div class="phone-list">
-                <div class="phone-item"><span>부수입</span><span class="pos">+10,000</span></div>
-                <div class="phone-item"><span>의류·잡화</span><span class="neg">-31,000</span></div>
-                <div class="phone-item"><span>식비</span><span class="neg">-3,500</span></div>
-              </div>
-            </div>
-          </div>
+          <figure class="shot-frame wide">
+            <img src="./assets/screens/input.png" width="720" height="1280" alt="쉬운가계부 입력 화면 — 지출/수입 선택과 카테고리 격자" />
+          </figure>
         </div>
       </div>
 
@@ -104,6 +83,52 @@
             <p>“홈에서 바로 오늘 지출 확인”</p>
             <span>위젯 · 빠른 입력</span>
           </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="screens">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>화면으로 먼저 둘러보기</h2>
+          <p>입력부터 달력·내역·통계·홈 위젯까지, 실제 앱 흐름을 미리 확인해 보세요. 좌우로 밀어 보면 더 볼 수 있어요.</p>
+        </div>
+        <div class="shot-rail" role="list">
+          <article class="shot-card" role="listitem">
+            <div class="shot-frame">
+              <img src="./assets/screens/input.png" alt="입력 화면 스크린샷" loading="lazy" />
+            </div>
+            <p>입력</p>
+            <span>지출/수입을 고르고 카테고리를 누르면 바로 금액을 적을 수 있어요.</span>
+          </article>
+          <article class="shot-card" role="listitem">
+            <div class="shot-frame">
+              <img src="./assets/screens/calendar.jpg" alt="달력 화면 미리보기" loading="lazy" />
+            </div>
+            <p>달력</p>
+            <span>날짜별 합계와 그날 내역을 보고, +로 그 날짜에 바로 기록해요.</span>
+          </article>
+          <article class="shot-card" role="listitem">
+            <div class="shot-frame">
+              <img src="./assets/screens/history.jpg" alt="내역 화면 미리보기" loading="lazy" />
+            </div>
+            <p>내역</p>
+            <span>이번 달 합계가 위에 고정되고, 검색·필터로 필요한 기록만 모아요.</span>
+          </article>
+          <article class="shot-card" role="listitem">
+            <div class="shot-frame">
+              <img src="./assets/screens/stats.jpg" alt="통계 화면 미리보기" loading="lazy" />
+            </div>
+            <p>통계</p>
+            <span>기간별 수입·지출·차액과 카테고리 비중을 한눈에 확인해요.</span>
+          </article>
+          <article class="shot-card" role="listitem">
+            <div class="shot-frame">
+              <img src="./assets/screens/widget.jpg" alt="홈 위젯 미리보기" loading="lazy" />
+            </div>
+            <p>홈 위젯</p>
+            <span>앱을 열지 않아도 오늘 수입·지출과 최근 내역을 볼 수 있어요.</span>
+          </article>
         </div>
       </div>
     </section>
@@ -152,24 +177,37 @@
           <h2>쉬운가계부가 해결해 주는 것</h2>
           <p>복잡한 가계부가 아니라, “오늘 쓴 돈만 남기고 한 달을 돌아보고 싶을 때” 쓰는 앱이에요.</p>
         </div>
-        <div class="grid-2">
-          <article class="panel">
-            <h3>기록은 빠르게</h3>
-            <p>수입/지출을 고르고 카테고리를 누르면 키패드가 바로 열립니다. 자주 쓰는 금액, 00·000, 어제·오늘로 손이 덜 가요.</p>
-          </article>
-          <article class="panel">
-            <h3>한 달은 한눈에</h3>
-            <p>달력에서 날짜별 흐름을 보고, 내역·통계로 합계와 카테고리 비중을 확인하세요. 차액은 ‘총수입 − 총지출’이에요.</p>
-          </article>
-          <article class="panel">
-            <h3>반복되는 돈은 자동으로</h3>
-            <p>급여, 월세처럼 반복되는 항목은 규칙만 등록하면 해당 날짜에 반영됩니다. 멈춰도 이미 쌓인 기록은 그대로예요.</p>
-          </article>
-          <article class="panel">
-            <h3>내 폰에만 안전하게</h3>
-            <p>로그인·클라우드 동기화가 없습니다. 백업 파일로 옮길 수 있고, 복원 전에는 꼭 한 번 더 확인해 주세요.</p>
-          </article>
+        <div class="about-lead">
+          <div>
+            <p style="margin:0 0 14px;color:var(--muted);font-size:1.02rem;">
+              가계부 앱이 많지만, 가입·광고·동기화 때문에 손이 가기도 해요. 쉬운가계부는 그 부담을 빼 두고
+              <strong style="color:var(--brand-deep);">카테고리 → 금액 → 저장</strong>만 남겼습니다.
+              한 달이 지나면 달력과 통계로 “어디에 썼지?”를 바로 확인하고, 급여·월세처럼 반복되는 돈은 규칙으로 자동 반영합니다.
+            </p>
+            <div class="grid-2">
+              <article class="panel">
+                <h3>기록은 빠르게</h3>
+                <p>수입/지출을 고르고 카테고리를 누르면 키패드가 바로 열립니다. 자주 쓰는 금액, 00·000, 어제·오늘로 손이 덜 가요.</p>
+              </article>
+              <article class="panel">
+                <h3>한 달은 한눈에</h3>
+                <p>달력에서 날짜별 흐름을 보고, 내역·통계로 합계와 카테고리 비중을 확인하세요. 차액은 ‘총수입 − 총지출’이에요.</p>
+              </article>
+              <article class="panel">
+                <h3>반복되는 돈은 자동으로</h3>
+                <p>급여, 월세처럼 반복되는 항목은 규칙만 등록하면 해당 날짜에 반영됩니다. 멈춰도 이미 쌓인 기록은 그대로예요.</p>
+              </article>
+              <article class="panel">
+                <h3>내 폰에만 안전하게</h3>
+                <p>로그인·클라우드 동기화가 없습니다. 백업 파일로 옮길 수 있고, 복원 전에는 꼭 한 번 더 확인해 주세요.</p>
+              </article>
+            </div>
+          </div>
+          <div class="illust-panel">
+            <img src="./assets/welcome-illust.png" width="480" height="480" alt="쉬운가계부 환영 일러스트" />
+          </div>
         </div>
+        <p><a href="./about.html">앱 소개 더 자세히 보기 →</a></p>
       </div>
     </section>
 
@@ -181,34 +219,28 @@
         </div>
         <div class="use-grid">
           <article class="use-item">
-            <div class="emoji">☕</div>
             <h3>매일 쓰는 생활비</h3>
-            <p>커피·식비·교통을 그날그날 빠르게 남겨요.</p>
+            <p>커피·식비·교통을 그날그날 빠르게 남겨요. 자주 쓰는 금액과 000 키로 입력이 짧아집니다.</p>
           </article>
           <article class="use-item">
-            <div class="emoji">📅</div>
             <h3>한 달 결산</h3>
-            <p>달력과 통계로 “어디에 썼지?”를 바로 확인해요.</p>
+            <p>달력과 통계로 “어디에 썼지?”를 바로 확인해요. 차액으로 이번 달 남긴 금액을 봅니다.</p>
           </article>
           <article class="use-item">
-            <div class="emoji">🏠</div>
             <h3>고정비 관리</h3>
-            <p>월세·통신비·구독료를 규칙으로 등록해 두면 편해요.</p>
+            <p>월세·통신비·구독료를 규칙으로 등록해 두면, 해당 날짜에 자동으로 반영돼요.</p>
           </article>
           <article class="use-item">
-            <div class="emoji">🔍</div>
             <h3>카테고리별 점검</h3>
-            <p>저장된 검색으로 식비·쇼핑만 따로 모아 봐요.</p>
+            <p>저장된 검색으로 식비·쇼핑만 따로 모아 봐요. 매달 같은 조건을 한 번에 불러옵니다.</p>
           </article>
           <article class="use-item">
-            <div class="emoji">📱</div>
             <h3>홈에서 바로 확인</h3>
-            <p>위젯으로 오늘 지출을 보고 바로 입력해요.</p>
+            <p>위젯으로 오늘 지출을 보고 바로 입력해요. 크기를 키우면 목록이 더 많이 보입니다.</p>
           </article>
           <article class="use-item">
-            <div class="emoji">🔐</div>
             <h3>계정 없이 쓰는 가계부</h3>
-            <p>가입·광고 없이, 이 기기 안에서만 가볍게.</p>
+            <p>가입·광고 없이, 이 기기 안에서만 가볍게. 필요할 때만 파일로 백업하세요.</p>
           </article>
         </div>
       </div>
@@ -218,34 +250,85 @@
       <div class="wrap">
         <div class="section-head">
           <h2>이런 일을 해줘요</h2>
-          <p>어려운 말 없이, 일상에서 바로 쓰는 기능만 모았어요.</p>
+          <p>어려운 말 없이, 일상에서 바로 쓰는 기능을 화면과 함께 살펴보세요.</p>
         </div>
-        <div class="grid-3">
-          <article class="panel">
-            <h3>입력</h3>
-            <p>카테고리 → 금액 → 저장. 결제수단·메모도 한 화면에서. 저장 후 키보드도 함께 닫혀요.</p>
+        <div class="feature-rows">
+          <article class="feature-row">
+            <div class="shot-frame">
+              <img src="./assets/screens/input.png" alt="입력 화면" loading="lazy" />
+            </div>
+            <div class="feature-copy">
+              <h3>입력 — 카테고리만 누르면 시작</h3>
+              <p>지출/수입 토글 후 카테고리를 고르면 금액 키패드가 바로 열립니다. 결제수단·메모도 같은 흐름에서 남길 수 있어요.</p>
+              <ul>
+                <li>어제·오늘 버튼으로 날짜를 빠르게 맞춤</li>
+                <li>자주 쓰는 금액과 00·000 키로 입력 단축</li>
+                <li>저장하면 키보드도 함께 닫혀 다음 기록이 편함</li>
+              </ul>
+            </div>
           </article>
-          <article class="panel">
-            <h3>달력</h3>
-            <p>날짜별 수입·지출과 그날 내역. + 버튼으로 그 날짜 입력, 저장 후 다시 그 날짜로 복귀.</p>
+
+          <article class="feature-row reverse">
+            <div class="shot-frame">
+              <img src="./assets/screens/calendar.jpg" alt="달력 화면" loading="lazy" />
+            </div>
+            <div class="feature-copy">
+              <h3>달력 — 그 날짜로 바로 기록</h3>
+              <p>날짜를 누르면 그날 수입·지출과 내역이 보입니다. + 버튼으로 그 날짜 입력으로 들어가고, 저장 후에는 다시 그 날짜 달력으로 돌아와요.</p>
+              <ul>
+                <li>월 단위로 흐름을 한눈에 확인</li>
+                <li>달력 ↔ 입력 왕복으로 끊김 없는 기록</li>
+                <li>위젯의 ‘달력’으로 오늘 날짜를 바로 열 수 있음</li>
+              </ul>
+            </div>
           </article>
-          <article class="panel">
-            <h3>내역 · 검색</h3>
-            <p>전체/수입/지출 토글, 카테고리·메모·금액·기간·결제수단 검색, 조건 저장.</p>
+
+          <article class="feature-row">
+            <div class="shot-frame">
+              <img src="./assets/screens/history.jpg" alt="내역 화면" loading="lazy" />
+            </div>
+            <div class="feature-copy">
+              <h3>내역 · 검색 — 합계는 위에 고정</h3>
+              <p>목록을 내려도 이번 달 수입·지출·차액이 상단에 남아 있어요. 전체/수입/지출 토글과 카테고리·메모·금액·기간·결제수단 검색으로 필요한 기록만 모을 수 있습니다.</p>
+              <ul>
+                <li>자주 쓰는 검색 조건을 이름으로 저장</li>
+                <li>매달 같은 필터를 한 번에 불러오기</li>
+                <li>차액은 통장 잔액이 아니라 ‘총수입 − 총지출’</li>
+              </ul>
+            </div>
           </article>
-          <article class="panel">
-            <h3>통계</h3>
-            <p>기간별 합계와 카테고리 비중. 차액으로 “이번 달 얼마나 남겼나”를 봐요.</p>
+
+          <article class="feature-row reverse">
+            <div class="shot-frame">
+              <img src="./assets/screens/stats.jpg" alt="통계 화면" loading="lazy" />
+            </div>
+            <div class="feature-copy">
+              <h3>통계 — 어디에 썼는지 한눈에</h3>
+              <p>기간을 고르면 수입·지출·차액과 카테고리 비중을 보여 줍니다. 결산할 때 “식비가 얼마나 나갔지?”를 바로 확인할 수 있어요.</p>
+              <ul>
+                <li>기간별 합계와 비중</li>
+                <li>카테고리 중심으로 소비 패턴 점검</li>
+                <li>내역·달력과 이어지는 한 달 결산 흐름</li>
+              </ul>
+            </div>
           </article>
-          <article class="panel">
-            <h3>카테고리 · 고정비</h3>
-            <p>아이콘·자주 쓰는 금액·숨김 관리. 반복 규칙은 날짜에 자동 반영.</p>
-          </article>
-          <article class="panel">
-            <h3>백업 · 위젯 · 알림</h3>
-            <p>파일 백업/복원, 홈 위젯, 미기록·고정비 예정 알림으로 놓치지 않게.</p>
+
+          <article class="feature-row">
+            <div class="shot-frame">
+              <img src="./assets/screens/widget.jpg" alt="홈 위젯" loading="lazy" />
+            </div>
+            <div class="feature-copy">
+              <h3>위젯 · 고정비 · 백업</h3>
+              <p>홈 화면 위젯으로 오늘 수입·지출을 보고 ‘입력’·‘달력’으로 바로 이어집니다. 급여·월세 같은 고정비는 규칙만 등록하면 날짜에 반영되고, 파일 백업으로 기기 이전에도 대비할 수 있어요.</p>
+              <ul>
+                <li>위젯 크기 조절로 목록 표시량 변경</li>
+                <li>미기록·고정비 예정 알림(선택)</li>
+                <li>설정에서 백업·복원 파일 관리</li>
+              </ul>
+            </div>
           </article>
         </div>
+        <p style="margin-top:20px"><a href="./features.html">기능 안내 전체 보기 →</a></p>
       </div>
     </section>
 
@@ -281,6 +364,7 @@
             </div>
           </article>
         </div>
+        <p style="margin-top:18px"><a href="./guide.html">사용 방법 자세히 보기 →</a></p>
       </div>
     </section>
 
