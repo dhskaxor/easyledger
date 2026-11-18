@@ -18,6 +18,22 @@ npx serve website
 4. Framework Preset: Other (정적 파일)
 5. Deploy
 
-Play Store 링크는 `index.html`의 `#download` 버튼 URL을 스토어 등록 후 실제 주소로 확인하세요.
+## 페이지 구성
+
+| 경로 | 설명 |
+| --- | --- |
+| `/` | 홈(랜딩) |
+| `/news.html` | 새 소식 |
+| `/about.html` | 앱 소개 |
+| `/features.html` | 기능 |
+| `/guide.html` | 사용 방법 |
+| `/data.html` | 데이터 안내 |
+| `/faq.html` | FAQ |
+| `/privacy.html` | 개인정보 처리방침 |
+| `/terms.html` | 이용약관 |
+| `/permissions.html` | 앱 권한 안내 |
+| `/contact.html` | 문의하기 |
+
+Play Store 링크는 `index.html`의 다운로드 버튼 URL을 스토어 등록 후 확인하세요.
 
 현재 패키지: `com.sunwoo.easyledger`

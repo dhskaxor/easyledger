@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>앱 권한 안내 — 쉬운가계부</title>
+  <meta name="description" content="쉬운가계부가 요청할 수 있는 권한과 사용 목적을 안내합니다." />
+  <link rel="icon" href="./assets/icon.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&display=swap" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">본문으로 바로가기</a>
+  <div id="site-header"></div>
+  <main id="main">
+    <section class="page-hero">
+      <div class="wrap">
+        <h1>앱 권한 안내</h1>
+        <p>쉬운가계부는 위치 기반 서비스를 사용하지 않습니다. 필요한 권한만 안내드려요.</p>
+      </div>
+    </section>
+    <section class="page-content">
+      <div class="wrap prose">
+        <span class="updated">위치정보·GPS를 수집하거나 서버로 전송하지 않습니다.</span>
+        <h2>알림</h2>
+        <p>오늘 미기록 안내, 고정비 예정일 안내 등 선택적 알림을 위해 알림 권한을 요청할 수 있습니다. 거부해도 기본 가계부 기능은 사용할 수 있어요.</p>
+        <h2>저장소 / 파일 (백업)</h2>
+        <p>사용자가 백업·복원을 실행할 때, 시스템이 제공하는 파일 선택기로 백업 파일을 저장하거나 불러올 수 있습니다. 앱이 임의로 사진첩·파일을 스캔하지 않습니다.</p>
+        <h2>위치</h2>
+        <p>쉬운가계부는 위치 권한을 요구하지 않으며, 위치기반서비스를 제공하지 않습니다. (루트온 등 지도 앱과 무관합니다.)</p>
+        <h2>네트워크</h2>
+        <p>가계부 데이터 동기화를 위한 서버 통신은 없습니다. 스토어 업데이트나 사용자가 직접 연 웹 링크 등은 기기·스토어 정책에 따릅니다.</p>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="./site.js"></script>
+</body>
+</html>
