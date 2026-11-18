@@ -1,0 +1,32 @@
+# Android / Gradle
+.gradle/
+build/
+**/build/
+local.properties
+*.iml
+.idea/
+.cxx/
+captures/
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+
+# Signing / secrets
+keystore.properties
+*.jks
+*.keystore
+PLAY_SIGNING.txt
+**/easyledger-play.jks
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.cursor/
+
+# Node (if any)
+node_modules/
+.vercel/

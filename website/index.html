@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>쉬운가계부 — 로그인 없이, 오늘 쓴 돈만 가볍게</title>
+  <meta name="description" content="쉬운가계부는 광고·로그인 없이 이 폰 안에서만 쓰는 개인 가계부입니다. 빠른 입력, 달력, 내역·통계, 고정비, 위젯까지 한 번에." />
+  <meta property="og:title" content="쉬운가계부 — 로그인 없이, 오늘 쓴 돈만 가볍게" />
+  <meta property="og:description" content="광고 없는 오프라인 가계부. 입력·달력·통계·고정비·위젯으로 한 달을 단정하게 돌아보세요." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./assets/icon.png" />
+  <link rel="icon" href="./assets/icon.png" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&display=swap" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">본문으로 바로가기</a>
+
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="쉬운가계부 홈">
+        <img src="./assets/icon.png" alt="" width="36" height="36" />
+        쉬운가계부
+      </a>
+      <button class="nav-toggle" type="button" aria-label="메뉴 열기" id="navToggle">☰</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#news">새 소식</a>
+        <a href="#about">앱 소개</a>
+        <a href="#cases">활용 예시</a>
+        <a href="#features">기능</a>
+        <a href="#howto">사용 방법</a>
+        <a href="#faq">FAQ</a>
+        <a class="nav-cta" href="#download">다운로드</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">
+            <span class="pill">Android</span>
+            <span class="pill">완전 무료</span>
+            <span class="pill">로그인 없음</span>
+          </div>
+          <h1>
+            <span class="hero-brand">쉬운가계부</span>
+            오늘 쓴 돈,<br />가볍게 남기고 단정하게 돌아보기
+          </h1>
+          <p class="hero-lead">
+            쉬운가계부는 광고·클라우드 없이 이 기기 안에서만 쓰는 개인 가계부예요.
+            카테고리만 고르면 금액 키패드가 바로 열리고, 달력·내역·통계로 한 달을 한눈에 볼 수 있어요.
+            급여·월세 같은 고정비와 홈 화면 위젯까지 챙겨 줍니다.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#download">무료로 받기</a>
+            <a class="btn btn-ghost" href="#news">새로워진 점 보기</a>
+            <a class="btn btn-ghost" href="#howto">사용 방법</a>
+          </div>
+          <ul class="checklist">
+            <li>로그인·광고 없이 바로 시작</li>
+            <li>어제·오늘·000 키로 입력이 짧아져요</li>
+            <li>달력 FAB로 그 날짜에 바로 기록</li>
+            <li>내역 상단에 이번 달 합계가 고정</li>
+            <li>홈 위젯으로 오늘 수입·지출 확인</li>
+            <li>데이터는 이 폰에만 저장</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="float-tag a">오늘 지출</div>
+          <div class="float-tag b">빠른 입력</div>
+          <div class="float-tag c">위젯 · 달력</div>
+          <div class="phone">
+            <div class="phone-screen">
+              <div class="phone-top">
+                <span>오늘 요약</span>
+                <span>3건</span>
+              </div>
+              <div class="phone-row">
+                <div class="mini expense">
+                  <strong>지출</strong>
+                  34,500원
+                </div>
+                <div class="mini income">
+                  <strong>수입</strong>
+                  10,000원
+                </div>
+              </div>
+              <div class="phone-amount">이번 달도 단정하게</div>
+              <div class="phone-list">
+                <div class="phone-item"><span>부수입</span><span class="pos">+10,000</span></div>
+                <div class="phone-item"><span>의류·잡화</span><span class="neg">-31,000</span></div>
+                <div class="phone-item"><span>식비</span><span class="neg">-3,500</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <div class="strip" aria-label="핵심 포인트">
+          <div class="strip-item"><strong>0원</strong><span>광고·구독 없음</span></div>
+          <div class="strip-item"><strong>오프라인</strong><span>이 기기에서만 저장</span></div>
+          <div class="strip-item"><strong>위젯</strong><span>오늘 수입·지출 한눈</span></div>
+          <div class="strip-item"><strong>고정비</strong><span>급여·월세 자동 반영</span></div>
+        </div>
+
+        <div class="quote-row">
+          <blockquote class="quote">
+            <p>“식비 적는 시간이 짧아졌어요”</p>
+            <span>키패드 · 자주 쓰는 금액</span>
+          </blockquote>
+          <blockquote class="quote">
+            <p>“목록 내려도 달 합계가 보여요”</p>
+            <span>내역 상단 고정 합계</span>
+          </blockquote>
+          <blockquote class="quote">
+            <p>“홈에서 바로 오늘 지출 확인”</p>
+            <span>위젯 · 빠른 입력</span>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="news">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>요즘 쉬운가계부, 이렇게 좋아졌어요</h2>
+          <p>더 빠르게 남기고, 더 편하게 돌아보고, 놓치기 쉬운 기록까지 살짝 챙겨 주도록 다듬었어요.</p>
+        </div>
+        <div class="grid-3">
+          <article class="panel">
+            <span class="badge">NEW</span>
+            <h3>홈 화면 위젯</h3>
+            <p>오늘 수입·지출 합계와 내역을 한눈에. ‘입력’으로 바로 기록하고, ‘달력’으로 오늘 날짜를 자세히 볼 수 있어요. 크기도 조절됩니다.</p>
+          </article>
+          <article class="panel">
+            <span class="badge">NEW</span>
+            <h3>검색 조건 저장</h3>
+            <p>“이번 달 식비”처럼 자주 쓰는 필터를 이름으로 저장해 두고, 매달 같은 조건을 한 번에 불러오세요.</p>
+          </article>
+          <article class="panel">
+            <span class="badge">NEW</span>
+            <h3>미기록 · 고정비 알림</h3>
+            <p>오늘 아직 기록이 없거나, 내일 고정비가 예정되어 있으면 살짝 알려 드려요.</p>
+          </article>
+          <article class="panel">
+            <h3>어제 · 오늘 · 000 키</h3>
+            <p>날짜 화살표에 더해 어제·오늘 버튼과 000 키로 금액 입력이 훨씬 짧아집니다.</p>
+          </article>
+          <article class="panel">
+            <h3>달력 ↔ 입력 왕복</h3>
+            <p>달력에서 +로 들어가 저장하면, 방금 고른 날짜의 달력으로 다시 돌아갑니다.</p>
+          </article>
+          <article class="panel">
+            <h3>내역 월 합계 고정</h3>
+            <p>목록을 스크롤해도 위쪽에 이번 달 수입·지출·차액이 그대로 남아요.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>쉬운가계부가 해결해 주는 것</h2>
+          <p>복잡한 가계부가 아니라, “오늘 쓴 돈만 남기고 한 달을 돌아보고 싶을 때” 쓰는 앱이에요.</p>
+        </div>
+        <div class="grid-2">
+          <article class="panel">
+            <h3>기록은 빠르게</h3>
+            <p>수입/지출을 고르고 카테고리를 누르면 키패드가 바로 열립니다. 자주 쓰는 금액, 00·000, 어제·오늘로 손이 덜 가요.</p>
+          </article>
+          <article class="panel">
+            <h3>한 달은 한눈에</h3>
+            <p>달력에서 날짜별 흐름을 보고, 내역·통계로 합계와 카테고리 비중을 확인하세요. 차액은 ‘총수입 − 총지출’이에요.</p>
+          </article>
+          <article class="panel">
+            <h3>반복되는 돈은 자동으로</h3>
+            <p>급여, 월세처럼 반복되는 항목은 규칙만 등록하면 해당 날짜에 반영됩니다. 멈춰도 이미 쌓인 기록은 그대로예요.</p>
+          </article>
+          <article class="panel">
+            <h3>내 폰에만 안전하게</h3>
+            <p>로그인·클라우드 동기화가 없습니다. 백업 파일로 옮길 수 있고, 복원 전에는 꼭 한 번 더 확인해 주세요.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="cases">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>이럴 때 쉬운가계부</h2>
+          <p>매일 조금씩 쓰는 돈부터, 한 달 결산까지 — 부담 없이 남기고 싶을 때.</p>
+        </div>
+        <div class="use-grid">
+          <article class="use-item">
+            <div class="emoji">☕</div>
+            <h3>매일 쓰는 생활비</h3>
+            <p>커피·식비·교통을 그날그날 빠르게 남겨요.</p>
+          </article>
+          <article class="use-item">
+            <div class="emoji">📅</div>
+            <h3>한 달 결산</h3>
+            <p>달력과 통계로 “어디에 썼지?”를 바로 확인해요.</p>
+          </article>
+          <article class="use-item">
+            <div class="emoji">🏠</div>
+            <h3>고정비 관리</h3>
+            <p>월세·통신비·구독료를 규칙으로 등록해 두면 편해요.</p>
+          </article>
+          <article class="use-item">
+            <div class="emoji">🔍</div>
+            <h3>카테고리별 점검</h3>
+            <p>저장된 검색으로 식비·쇼핑만 따로 모아 봐요.</p>
+          </article>
+          <article class="use-item">
+            <div class="emoji">📱</div>
+            <h3>홈에서 바로 확인</h3>
+            <p>위젯으로 오늘 지출을 보고 바로 입력해요.</p>
+          </article>
+          <article class="use-item">
+            <div class="emoji">🔐</div>
+            <h3>계정 없이 쓰는 가계부</h3>
+            <p>가입·광고 없이, 이 기기 안에서만 가볍게.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>이런 일을 해줘요</h2>
+          <p>어려운 말 없이, 일상에서 바로 쓰는 기능만 모았어요.</p>
+        </div>
+        <div class="grid-3">
+          <article class="panel">
+            <h3>입력</h3>
+            <p>카테고리 → 금액 → 저장. 결제수단·메모도 한 화면에서. 저장 후 키보드도 함께 닫혀요.</p>
+          </article>
+          <article class="panel">
+            <h3>달력</h3>
+            <p>날짜별 수입·지출과 그날 내역. + 버튼으로 그 날짜 입력, 저장 후 다시 그 날짜로 복귀.</p>
+          </article>
+          <article class="panel">
+            <h3>내역 · 검색</h3>
+            <p>전체/수입/지출 토글, 카테고리·메모·금액·기간·결제수단 검색, 조건 저장.</p>
+          </article>
+          <article class="panel">
+            <h3>통계</h3>
+            <p>기간별 합계와 카테고리 비중. 차액으로 “이번 달 얼마나 남겼나”를 봐요.</p>
+          </article>
+          <article class="panel">
+            <h3>카테고리 · 고정비</h3>
+            <p>아이콘·자주 쓰는 금액·숨김 관리. 반복 규칙은 날짜에 자동 반영.</p>
+          </article>
+          <article class="panel">
+            <h3>백업 · 위젯 · 알림</h3>
+            <p>파일 백업/복원, 홈 위젯, 미기록·고정비 예정 알림으로 놓치지 않게.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="howto">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>3분이면 충분해요 — 사용 방법</h2>
+          <p>처음이어도 괜찮아요. 앱 안 「앱 정보」에도 같은 안내가 있어요.</p>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <div>
+              <h3>설치하고 카테고리 고르기</h3>
+              <p>Google Play에서 「쉬운가계부」를 설치한 뒤, 처음 실행에서 자주 쓸 카테고리만 골라 주세요. 나중에 설정에서 더 추가할 수 있어요.</p>
+            </div>
+          </article>
+          <article class="step">
+            <div>
+              <h3>오늘 쓴 돈 남기기</h3>
+              <p>입력 탭에서 지출/수입 → 카테고리 → 금액 → 저장. 어제·오늘 버튼과 자주 쓰는 금액으로 더 빠르게.</p>
+            </div>
+          </article>
+          <article class="step">
+            <div>
+              <h3>달력 · 내역으로 돌아보기</h3>
+              <p>달력에서 날짜를 누르거나, 내역에서 이번 달 합계와 검색으로 필요한 기록만 모아 보세요.</p>
+            </div>
+          </article>
+          <article class="step">
+            <div>
+              <h3>위젯과 고정비 챙기기</h3>
+              <p>홈 화면에 위젯을 추가하고, 설정에서 반복되는 수입·지출 규칙을 등록해 두면 매일이 더 편해져요.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacy">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>내 정보, 어떻게 다뤄지나요?</h2>
+          <p>원칙은 단순해요. 기록은 이 기기에만, 서버로 올리지 않아요.</p>
+        </div>
+        <div class="grid-2">
+          <article class="panel">
+            <h3>회원가입이 없어요</h3>
+            <p>이메일·비밀번호·소셜 로그인 없이 바로 씁니다. 광고도 없습니다.</p>
+          </article>
+          <article class="panel">
+            <h3>데이터는 이 폰에만</h3>
+            <p>거래·카테고리·설정은 기기 안 저장소에 보관됩니다. 클라우드 동기화는 없어요.</p>
+          </article>
+          <article class="panel">
+            <h3>백업은 내가 원할 때</h3>
+            <p>설정에서 파일로 백업하거나 복원할 수 있어요. 복원하면 현재 데이터가 바뀌니 신중히 진행해 주세요.</p>
+          </article>
+          <article class="panel">
+            <h3>알림 권한</h3>
+            <p>미기록·고정비 안내를 받으려면 알림을 허용해 주세요. 원치 않으면 시스템 설정에서 끌 수 있어요.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>자주 묻는 질문</h2>
+          <p>궁금한 점을 먼저 모아 두었어요.</p>
+        </div>
+
+        <details>
+          <summary>정말 무료인가요? 구독이 있나요?</summary>
+          <p>네. 광고·인앱 결제·구독 없이 사용할 수 있어요.</p>
+        </details>
+        <details>
+          <summary>다른 폰으로 옮길 수 있나요?</summary>
+          <p>설정 → 백업에서 파일을 저장한 뒤, 새 기기에서 복원하면 됩니다. 복원 전 현재 데이터는 덮어쓰이니 주의해 주세요.</p>
+        </details>
+        <details>
+          <summary>차액은 통장 잔액인가요?</summary>
+          <p>아니요. 선택한 기간의 총수입에서 총지출을 뺀 값이에요. “이번 달 얼마나 남겼나”를 보는 숫자입니다.</p>
+        </details>
+        <details>
+          <summary>위젯이 안 보여요.</summary>
+          <p>홈 화면을 길게 누르거나 위젯 추가 메뉴에서 「쉬운가계부」를 찾아 추가해 주세요. 크기를 키우면 목록이 더 많이 보입니다.</p>
+        </details>
+        <details>
+          <summary>문의는 어디로 하나요?</summary>
+          <p>앱 정보 또는 아래 메일 <a href="mailto:onamt@naver.com">onamt@naver.com</a>으로 보내 주세요. 만든이 SUNWOO가 확인합니다.</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="download">
+      <div class="wrap">
+        <div class="cta-band">
+          <h2>오늘부터, 가볍게 남겨 보세요</h2>
+          <p>로그인 없이 바로 시작. 쉬운가계부로 오늘 쓴 돈을 남기고, 한 달을 단정하게 돌아봐요.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.sunwoo.easyledger" rel="noopener" target="_blank">Google Play에서 받기</a>
+            <a class="btn btn-ghost" href="mailto:onamt@naver.com">문의 메일 보내기</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <strong style="color: var(--brand-deep);">쉬운가계부</strong><br />
+        만든이 SUNWOO · <a href="mailto:onamt@naver.com">onamt@naver.com</a><br />
+        패키지명 com.sunwoo.easyledger
+      </div>
+      <div>
+        <a href="#features">기능</a> ·
+        <a href="#howto">사용 방법</a> ·
+        <a href="#faq">FAQ</a> ·
+        <a href="#download">다운로드</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById("navToggle");
+    const links = document.getElementById("navLinks");
+    toggle?.addEventListener("click", () => {
+      links?.classList.toggle("open");
+    });
+    links?.querySelectorAll("a").forEach((a) => {
+      a.addEventListener("click", () => links.classList.remove("open"));
+    });
+  </script>
+</body>
+</html>
