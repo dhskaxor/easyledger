@@ -45,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
     private boolean openInputPending;
     private boolean openCalendarPending;
     private String pendingCalendarDate;
+    private int lastRootDestinationId = View.NO_ID;
+    private int rootVisitCount;
     private final ActivityResultLauncher<Intent> onboardingLauncher =
             registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
                 enterApp();
@@ -238,11 +240,34 @@ public class MainActivity extends AppCompatActivity {
         }
         if (root) {
             binding.toolbar.setNavigationIcon(null);
+            maybeOfferInterstitial(destination.getId());
         } else {
             binding.toolbar.setNavigationIcon(R.drawable.ic_back);
             binding.toolbar.setNavigationContentDescription(R.string.back);
             binding.toolbar.setNavigationOnClickListener(view -> navController.popBackStack());
         }
+    }
+
+    /** 내역/통계 탭 진입 시 전면 광고 (첫 진입·입력 탭은 제외, AdManager에서 횟수/간격 제한). */
+    private void maybeOfferInterstitial(int destinationId) {
+        if (!ready) {
+            lastRootDestinationId = destinationId;
+            return;
+        }
+        boolean changed = destinationId != lastRootDestinationId;
+        lastRootDestinationId = destinationId;
+        if (!changed) {
+            return;
+        }
+        rootVisitCount++;
+        boolean historyOrStats = destinationId == R.id.historyFragment
+                || destinationId == R.id.statisticsFragment;
+        // 앱 켠 직후 첫 루트 화면은 건너뛰고, 내역/통계로 옮길 때만
+        if (!historyOrStats || rootVisitCount < 2) {
+            return;
+        }
+        EasyLedgerApp app = (EasyLedgerApp) getApplication();
+        app.ads().maybeShowInterstitial(this);
     }
 
     @Override

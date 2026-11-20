@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.sunwoo.easyledger.R;
+import com.sunwoo.easyledger.app.EasyLedgerApp;
 import com.sunwoo.easyledger.common.DateTimes;
 import com.sunwoo.easyledger.databinding.FragmentStatisticsBinding;
 import com.sunwoo.easyledger.databinding.ItemCategoryStatBinding;
@@ -61,6 +62,13 @@ public class StatisticsFragment extends Fragment {
         });
         viewModel.report.observe(getViewLifecycleOwner(), this::show);
         viewModel.attach();
+        binding.adBannerContainer.post(() -> {
+            if (!isAdded() || binding == null) {
+                return;
+            }
+            EasyLedgerApp app = (EasyLedgerApp) requireActivity().getApplication();
+            app.ads().bindBanner(requireActivity(), binding.adBannerContainer);
+        });
     }
 
     private void show(StatisticsReport report) {
@@ -99,6 +107,10 @@ public class StatisticsFragment extends Fragment {
 
     @Override
     public void onDestroyView() {
+        if (binding != null) {
+            EasyLedgerApp app = (EasyLedgerApp) requireActivity().getApplication();
+            app.ads().unbindBanner(binding.adBannerContainer);
+        }
         binding = null;
         super.onDestroyView();
     }

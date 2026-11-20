@@ -14,6 +14,7 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/widget_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/widget_today_summary"
@@ -94,13 +95,14 @@
             <TextView
                 android:id="@+id/widget_add"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="36dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_widget_button"
                 android:gravity="center"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
-                android:text="@string/widget_quick_input"
+                android:includeFontPadding="false"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="@string/widget_quick_input_short"
                 android:textColor="#FFFFFF"
                 android:textSize="12sp"
                 android:textStyle="bold" />
@@ -108,14 +110,15 @@
             <TextView
                 android:id="@+id/widget_detail"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="36dp"
                 android:layout_marginStart="6dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_widget_button_outline"
                 android:gravity="center"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
-                android:text="@string/widget_view_detail"
+                android:includeFontPadding="false"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="@string/widget_view_detail_short"
                 android:textColor="#0D7A70"
                 android:textSize="12sp"
                 android:textStyle="bold" />
@@ -137,6 +140,7 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/widget_list_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/widget_today_list"

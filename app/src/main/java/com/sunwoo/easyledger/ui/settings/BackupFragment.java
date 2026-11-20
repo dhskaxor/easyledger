@@ -48,8 +48,21 @@ public class BackupFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        binding.backupButton.setOnClickListener(v -> startBackup());
+        binding.backupButton.setOnClickListener(v -> confirmBackupWithAd());
         binding.restoreButton.setOnClickListener(v -> openDocument.launch(new String[] {"application/zip", "application/octet-stream", "*/*"}));
+    }
+
+    /** 보상형 광고(선택) 후 백업. 광고 실패·닫기여도 백업은 진행. */
+    private void confirmBackupWithAd() {
+        new MaterialAlertDialogBuilder(requireContext())
+                .setTitle(R.string.backup_ad_title)
+                .setMessage(R.string.backup_ad_message)
+                .setNegativeButton(R.string.backup_ad_skip, (d, w) -> startBackup())
+                .setPositiveButton(R.string.backup_ad_watch, (d, w) -> {
+                    EasyLedgerApp app = (EasyLedgerApp) requireActivity().getApplication();
+                    app.ads().runWithRewardedOptional(requireActivity(), this::startBackup);
+                })
+                .show();
     }
 
     private void startBackup() {

@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.sunwoo.easyledger.R;
+import com.sunwoo.easyledger.app.EasyLedgerApp;
 import com.sunwoo.easyledger.data.entity.IncomeExpense;
 import com.sunwoo.easyledger.data.entity.TxListItem;
 import com.sunwoo.easyledger.databinding.FragmentHistoryBinding;
@@ -65,6 +66,13 @@ public class HistoryFragment extends Fragment {
         viewModel.items.observe(getViewLifecycleOwner(), this::show);
         viewModel.monthTotals.observe(getViewLifecycleOwner(), this::showMonthTotals);
         syncTypeToggle();
+        binding.adBannerContainer.post(() -> {
+            if (!isAdded() || binding == null) {
+                return;
+            }
+            EasyLedgerApp app = (EasyLedgerApp) requireActivity().getApplication();
+            app.ads().bindBanner(requireActivity(), binding.adBannerContainer);
+        });
         getChildFragmentManager().setFragmentResultListener(SearchDialog.REQUEST, getViewLifecycleOwner(), (key, bundle) -> {
             if (bundle.getBoolean("clear")) {
                 viewModel.clearFilters();
@@ -140,6 +148,10 @@ public class HistoryFragment extends Fragment {
 
     @Override
     public void onDestroyView() {
+        if (binding != null) {
+            EasyLedgerApp app = (EasyLedgerApp) requireActivity().getApplication();
+            app.ads().unbindBanner(binding.adBannerContainer);
+        }
         binding = null;
         super.onDestroyView();
     }

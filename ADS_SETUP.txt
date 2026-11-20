@@ -1,0 +1,25 @@
+쉬운가계부 AdMob 설정
+====================
+
+현재 기본값은 Google 테스트 광고 단위입니다.
+실제 수익 광고로 바꾸려면 프로젝트 루트 local.properties에 아래를 추가하세요.
+
+admob.appId=ca-app-pub-xxxxxxxxxxxxxxxx~yyyyyyyyyy
+admob.bannerId=ca-app-pub-xxxxxxxxxxxxxxxx/zzzzzzzzzz
+admob.interstitialId=ca-app-pub-xxxxxxxxxxxxxxxx/zzzzzzzzzz
+admob.rewardedId=ca-app-pub-xxxxxxxxxxxxxxxx/zzzzzzzzzz
+
+배치 요약
+---------
+· 배너: 내역 탭 하단, 통계 탭 하단
+· 전면: 내역/통계 탭 진입 시 (하루 최대 2회, 90초 간격, 앱 첫 화면 제외)
+· 보상형: 백업 전 선택(광고 없이 백업 가능, 실패 시에도 백업 진행)
+
+Play Console
+------------
+· 앱에 광고 포함: 예
+· 광고 ID 선언 / AdMob 앱 연결
+· 개인정보 처리방침 URL에 광고 SDK 안내 반영 (website/privacy.html)
+· EU/영국 등 대상이면 UMP 동의 폼 추가 권장 (추후)
+
+버전: 1.1.0 (versionCode 4) 부터 광고 코드 포함

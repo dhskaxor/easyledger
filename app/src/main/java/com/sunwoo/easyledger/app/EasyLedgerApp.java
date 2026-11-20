@@ -6,6 +6,7 @@ import androidx.work.ExistingPeriodicWorkPolicy;
 import androidx.work.PeriodicWorkRequest;
 import androidx.work.WorkManager;
 
+import com.sunwoo.easyledger.ads.AdManager;
 import com.sunwoo.easyledger.common.AppLog;
 import com.sunwoo.easyledger.data.backup.BackupRepository;
 import com.sunwoo.easyledger.data.database.EasyLedgerDatabase;
@@ -23,10 +24,13 @@ public class EasyLedgerApp extends Application {
     private FixedTransactionRepository fixedTransactions;
     private SettingsRepository settings;
     private BackupRepository backup;
+    private AdManager ads;
 
     @Override
     public void onCreate() {
         super.onCreate();
+        ads = new AdManager(this);
+        ads.initialize(null);
         EasyLedgerDatabase database = EasyLedgerDatabase.get(this);
         categories = new CategoryRepository(database);
         transactions = new TransactionRepository(database);
@@ -93,5 +97,9 @@ public class EasyLedgerApp extends Application {
 
     public BackupRepository backup() {
         return backup;
+    }
+
+    public AdManager ads() {
+        return ads;
     }
 }

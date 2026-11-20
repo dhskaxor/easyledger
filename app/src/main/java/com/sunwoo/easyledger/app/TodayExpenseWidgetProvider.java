@@ -5,7 +5,9 @@ import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.View;
 import android.widget.RemoteViews;
 
@@ -30,6 +32,25 @@ public class TodayExpenseWidgetProvider extends AppWidgetProvider {
         COMPACT,
         MEDIUM,
         WIDE
+    }
+
+    /** 위젯 크기에 맞춘 sp 스케일. */
+    private static final class TextScale {
+        final float title;
+        final float amount;
+        final float label;
+        final float body;
+        final float button;
+        final float meta;
+
+        TextScale(float title, float amount, float label, float body, float button, float meta) {
+            this.title = title;
+            this.amount = amount;
+            this.label = label;
+            this.body = body;
+            this.button = button;
+            this.meta = meta;
+        }
     }
 
     @Override
@@ -58,7 +79,8 @@ public class TodayExpenseWidgetProvider extends AppWidgetProvider {
             List<TxListItem> items = app.transactions().listOnDate(today);
             Bundle options = manager.getAppWidgetOptions(appWidgetId);
             SizeMode mode = resolveMode(options);
-            RemoteViews views = buildViews(context, mode, expense, income, items);
+            TextScale scale = resolveTextScale(options, mode);
+            RemoteViews views = buildViews(context, mode, scale, expense, income, items);
             manager.updateAppWidget(appWidgetId, views);
         });
     }
@@ -78,6 +100,56 @@ public class TodayExpenseWidgetProvider extends AppWidgetProvider {
         return SizeMode.MEDIUM;
     }
 
+    /**
+     * 위젯 minWidth/minHeight(dp)와 레이아웃 모드로 글자 크기를 계산합니다.
+     * 기준 폭 250dp ≈ 1.0, 대략 0.88~1.28 사이로 클램프합니다.
+     */
+    private static TextScale resolveTextScale(Bundle options, SizeMode mode) {
+        int minWidth = options == null
+                ? 250
+                : options.getInt(AppWidgetManager.OPTION_APPWIDGET_MIN_WIDTH, 250);
+        int minHeight = options == null
+                ? 110
+                : options.getInt(AppWidgetManager.OPTION_APPWIDGET_MIN_HEIGHT, 110);
+
+        float widthFactor = minWidth / 250f;
+        float heightFactor = minHeight / 120f;
+        float factor = (widthFactor * 0.7f) + (heightFactor * 0.3f);
+        factor = Math.max(0.88f, Math.min(1.28f, factor));
+
+        // 모드별 기본 크기(sp)에 배율 적용
+        float baseAmount;
+        float baseTitle;
+        float baseButton;
+        switch (mode) {
+            case COMPACT:
+                baseAmount = 14f;
+                baseTitle = 11f;
+                baseButton = 11f;
+                break;
+            case WIDE:
+                baseAmount = 17f;
+                baseTitle = 12f;
+                baseButton = 12f;
+                break;
+            case MEDIUM:
+            default:
+                baseAmount = 15f;
+                baseTitle = 12f;
+                baseButton = 12f;
+                break;
+        }
+
+        return new TextScale(
+                baseTitle * factor,
+                baseAmount * factor,
+                11f * factor,
+                12f * factor,
+                baseButton * factor,
+                11f * factor
+        );
+    }
+
     private static int layoutFor(SizeMode mode) {
         switch (mode) {
             case COMPACT:
@@ -90,7 +162,7 @@ public class TodayExpenseWidgetProvider extends AppWidgetProvider {
         }
     }
 
-    private static int maxItemsFor(SizeMode mode, Bundle unused) {
+    private static int maxItemsFor(SizeMode mode) {
         switch (mode) {
             case COMPACT:
                 return 0;
@@ -102,9 +174,14 @@ public class TodayExpenseWidgetProvider extends AppWidgetProvider {
         }
     }
 
+    private static void setSp(RemoteViews views, int viewId, float sp) {
+        views.setTextViewTextSize(viewId, TypedValue.COMPLEX_UNIT_SP, sp);
+    }
+
     private static RemoteViews buildViews(
             Context context,
             SizeMode mode,
+            TextScale scale,
             long expense,
             long income,
             List<TxListItem> items
@@ -115,7 +192,25 @@ public class TodayExpenseWidgetProvider extends AppWidgetProvider {
         int count = items == null ? 0 : items.size();
         views.setTextViewText(R.id.widget_count, context.getString(R.string.widget_today_count, count));
 
-        int maxItems = maxItemsFor(mode, null);
+        // RemoteViews는 XML text가 누락되는 기기가 있어 버튼 문구/색을 코드에서 강제 설정
+        views.setTextViewText(R.id.widget_add, context.getString(R.string.widget_quick_input_short));
+        views.setTextColor(R.id.widget_add, Color.WHITE);
+        views.setTextViewText(R.id.widget_detail, context.getString(R.string.widget_view_detail_short));
+        views.setTextColor(R.id.widget_detail, ContextCompat.getColor(context, R.color.brand));
+
+        setSp(views, R.id.widget_expense, scale.amount);
+        setSp(views, R.id.widget_income, scale.amount);
+        setSp(views, R.id.widget_count, scale.meta);
+        setSp(views, R.id.widget_add, scale.button);
+        setSp(views, R.id.widget_detail, scale.button);
+        setSp(views, R.id.widget_title, scale.title);
+        if (mode != SizeMode.COMPACT) {
+            setSp(views, R.id.widget_list_title, scale.meta);
+            setSp(views, R.id.widget_empty, scale.body);
+            setSp(views, R.id.widget_more, scale.meta);
+        }
+
+        int maxItems = maxItemsFor(mode);
         views.removeAllViews(R.id.widget_list);
         if (mode == SizeMode.COMPACT || maxItems <= 0) {
             views.setViewVisibility(R.id.widget_list, View.GONE);
@@ -142,6 +237,8 @@ public class TodayExpenseWidgetProvider extends AppWidgetProvider {
                 row.setTextViewText(R.id.item_amount,
                         (isIncome ? "+" : "-") + Money.format(item.amount));
                 row.setTextColor(R.id.item_amount, isIncome ? incomeColor : expenseColor);
+                setSp(row, R.id.item_name, scale.body);
+                setSp(row, R.id.item_amount, scale.body);
                 views.addView(R.id.widget_list, row);
             }
             if (count > maxItems) {

@@ -158,6 +158,10 @@
     <string name="resume_rule">다시 사용</string>
     <string name="stop_message">이 반복을 중지합니다. 이미 기록된 거래는 삭제되지 않습니다.</string>
     <string name="backup_action">백업하기</string>
+    <string name="backup_ad_title">백업 전에</string>
+    <string name="backup_ad_message">짧은 광고를 보면 앱 운영에 도움이 됩니다. 광고를 보지 않아도 백업할 수 있어요.</string>
+    <string name="backup_ad_watch">광고 보고 백업</string>
+    <string name="backup_ad_skip">광고 없이 백업</string>
     <string name="restore_action">복원하기</string>
     <string name="restore_warning">현재 데이터가 백업 내용으로 모두 바뀝니다. 이 작업은 되돌릴 수 없습니다.</string>
     <string name="reset_warning">모든 거래, 카테고리, 반복 설정이 삭제되고 처음 카테고리 선택 화면으로 돌아갑니다.</string>
