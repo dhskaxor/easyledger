@@ -16,8 +16,8 @@ android {
         applicationId 'com.sunwoo.easyledger'
         minSdk 26
         targetSdk 36
-        versionCode 4
-        versionName '1.1.0'
+        versionCode 5
+        versionName '1.1.1'
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         // AdMob: 기본은 Google 테스트 ID. 실제 출시 전 local.properties에 넣어 교체.
         // admob.appId=ca-app-pub-xxxx~yyyy

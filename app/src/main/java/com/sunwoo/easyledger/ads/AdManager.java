@@ -2,7 +2,6 @@ package com.sunwoo.easyledger.ads;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.ViewGroup;
@@ -32,15 +31,13 @@ import java.util.concurrent.atomic.AtomicBoolean;
 /**
  * 광고 노출 정책:
  * - 배너: 내역/통계
- * - 전면: 내역·통계 진입 시, 세션당 최대 2회, 최소 90초 간격
+ * - 전면: 내역·통계 진입 시, 최소 3시간 간격(하루 횟수 제한 없음)
  * - 보상형: 백업 전(실패·스킵해도 백업은 진행)
  */
 public final class AdManager {
     private static final String PREFS = "easyledger_ads";
-    private static final String KEY_INTERSTITIAL_DAY = "interstitial_day";
-    private static final String KEY_INTERSTITIAL_COUNT = "interstitial_count";
-    private static final long INTERSTITIAL_COOLDOWN_MS = 90_000L;
-    private static final int INTERSTITIAL_MAX_PER_DAY = 2;
+    private static final String KEY_INTERSTITIAL_LAST_AT = "interstitial_last_at";
+    private static final long INTERSTITIAL_COOLDOWN_MS = 3L * 60L * 60L * 1000L; // 3시간
 
     private final Context appContext;
     private final Handler main = new Handler(Looper.getMainLooper());
@@ -56,6 +53,8 @@ public final class AdManager {
 
     public AdManager(Context context) {
         this.appContext = context.getApplicationContext();
+        this.lastInterstitialAt = appContext.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
+                .getLong(KEY_INTERSTITIAL_LAST_AT, 0L);
     }
 
     public void initialize(@Nullable Runnable onReady) {
@@ -183,28 +182,16 @@ public final class AdManager {
 
     private boolean canShowInterstitial() {
         long now = System.currentTimeMillis();
-        if (now - lastInterstitialAt < INTERSTITIAL_COOLDOWN_MS) {
-            return false;
-        }
-        SharedPreferences prefs = appContext.getSharedPreferences(PREFS, Context.MODE_PRIVATE);
-        String today = java.time.LocalDate.now().toString();
-        String day = prefs.getString(KEY_INTERSTITIAL_DAY, "");
-        int count = prefs.getInt(KEY_INTERSTITIAL_COUNT, 0);
-        if (!today.equals(day)) {
-            return true;
-        }
-        return count < INTERSTITIAL_MAX_PER_DAY;
+        return now - lastInterstitialAt >= INTERSTITIAL_COOLDOWN_MS;
     }
 
     private void markInterstitialShown() {
         lastInterstitialAt = System.currentTimeMillis();
-        SharedPreferences prefs = appContext.getSharedPreferences(PREFS, Context.MODE_PRIVATE);
-        String today = java.time.LocalDate.now().toString();
-        String day = prefs.getString(KEY_INTERSTITIAL_DAY, "");
-        int count = today.equals(day) ? prefs.getInt(KEY_INTERSTITIAL_COUNT, 0) : 0;
-        prefs.edit()
-                .putString(KEY_INTERSTITIAL_DAY, today)
-                .putInt(KEY_INTERSTITIAL_COUNT, count + 1)
+        appContext.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
+                .edit()
+                .putLong(KEY_INTERSTITIAL_LAST_AT, lastInterstitialAt)
+                .remove("interstitial_day")
+                .remove("interstitial_count")
                 .apply();
     }
 
