@@ -22,7 +22,7 @@ Play Console / app-ads.txt
 · 개인정보 처리방침 URL에 광고 SDK 안내 반영 (website/privacy.html)
 · EU/영국 등 대상이면 UMP 동의 폼 추가 권장 (추후)
 · app-ads.txt: website/app-ads.txt
-  → 배포 후 https://<소개사이트도메인>/app-ads.txt 로 열려야 함
+  → 배포 후 https://easyledger.sunoops.com/app-ads.txt 로 열려야 함
   → Play Console 앱의 웹사이트/개발자 사이트 URL이 같은 도메인이어야 AdMob 인증됨
   → 내용: google.com, pub-9231595389939688, DIRECT, f08c47fec0942fa0
 

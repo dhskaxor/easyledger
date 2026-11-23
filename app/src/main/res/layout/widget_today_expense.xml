@@ -33,36 +33,26 @@
             android:textColor="#5A6573"
             android:textSize="11sp" />
 
-        <TextView
+        <ImageView
             android:id="@+id/widget_add"
-            android:layout_width="wrap_content"
-            android:layout_height="32dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:background="@drawable/bg_widget_button"
-            android:gravity="center"
-            android:includeFontPadding="false"
-            android:minWidth="48dp"
-            android:paddingStart="12dp"
-            android:paddingEnd="12dp"
-            android:text="@string/widget_quick_input_short"
-            android:textColor="#FFFFFF"
-            android:textSize="12sp"
-            android:textStyle="bold" />
+            android:contentDescription="@string/widget_quick_input_short"
+            android:padding="8dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_widget_add" />
 
-        <TextView
+        <ImageView
             android:id="@+id/widget_detail"
-            android:layout_width="wrap_content"
-            android:layout_height="32dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_marginStart="6dp"
             android:background="@drawable/bg_widget_button_outline"
-            android:gravity="center"
-            android:includeFontPadding="false"
-            android:minWidth="48dp"
-            android:paddingStart="12dp"
-            android:paddingEnd="12dp"
-            android:text="@string/widget_view_detail_short"
-            android:textColor="#0D7A70"
-            android:textSize="12sp"
-            android:textStyle="bold" />
+            android:contentDescription="@string/widget_view_detail_short"
+            android:padding="8dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_widget_calendar" />
     </LinearLayout>
 
     <LinearLayout

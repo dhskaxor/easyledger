@@ -190,7 +190,7 @@
     <string name="widget_quick_input_short">입력</string>
     <string name="widget_view_detail">자세히 보기</string>
     <string name="widget_view_detail_short">달력</string>
-    <string name="widget_description">오늘 수입·지출과 내역을 보여 줍니다. 크기를 키우면 목록이 더 많이 보입니다.</string>
+    <string name="widget_description">오늘 수입·지출과 내역을 보여 줍니다. 크기를 바꿔도 입력·달력 바로가기는 그대로이고, 키우면 목록이 더 많이 보입니다.</string>
     <string name="notify_channel_name">가계부 알림</string>
     <string name="notify_channel_desc">미기록 안내와 고정비 예정 알림</string>
     <string name="notify_no_entry_title">오늘 아직 기록이 없어요</string>

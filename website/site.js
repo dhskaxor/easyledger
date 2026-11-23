@@ -12,8 +12,8 @@
   const header = `
   <header class="site-header">
     <div class="wrap nav">
-      <a class="brand" href="./index.html" aria-label="쉬운가계부 홈">
-        <img src="./assets/icon.png" alt="" width="36" height="36" />
+      <a class="brand" href="./index.html" aria-label="쉬운가계부 홈 — 로그인 없는 오프라인 가계부">
+        <img src="./assets/icon.png" alt="쉬운가계부 앱 아이콘" width="36" height="36" />
         쉬운가계부
       </a>
       <button class="nav-toggle" type="button" aria-label="메뉴 열기" id="navToggle">☰</button>
@@ -33,17 +33,18 @@
     <div class="wrap footer-columns">
       <div class="footer-col">
         <h3>쉬운가계부</h3>
-        <p>로그인 없이 이 폰 안에서만 쓰는 개인 가계부예요. 빠른 입력, 달력·내역·통계, 고정비와 홈 위젯으로 오늘 쓴 돈을 가볍게 남기고 한 달을 단정하게 돌아보세요. 완전 무료.</p>
+        <p>로그인 없이 이 폰 안에서만 쓰는 <strong>오프라인 가계부</strong>예요. 빠른 입력, 달력·내역·통계, 고정비와 홈 위젯으로 오늘 쓴 돈을 가볍게 남기고 한 달을 단정하게 돌아보세요. Android 완전 무료.</p>
+        <p><a href="https://play.google.com/store/apps/details?id=com.sunwoo.easyledger" rel="noopener" target="_blank">Google Play에서 쉬운가계부 받기</a></p>
       </div>
       <div class="footer-col">
         <h3>바로가기</h3>
         <ul>
           <li><a href="./news.html">새 소식</a></li>
           <li><a href="./about.html">앱 소개</a></li>
-          <li><a href="./features.html">기능</a></li>
+          <li><a href="./features.html">기능 안내</a></li>
           <li><a href="./guide.html">사용 방법</a></li>
           <li><a href="./data.html">데이터 안내</a></li>
-          <li><a href="./faq.html">FAQ</a></li>
+          <li><a href="./faq.html">자주 묻는 질문</a></li>
         </ul>
       </div>
       <div class="footer-col">

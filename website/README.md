@@ -2,6 +2,9 @@
 
 Vercel에 올리는 정적 랜딩 페이지입니다.
 
+**사이트 URL (canonical):** `https://easyledger.sunoops.com/`  
+도메인이 바뀌면 `index.html`·각 페이지 canonical/OG·`robots.txt`·`sitemap.xml`의 호스트를 함께 수정하세요.
+
 ## 로컬 확인
 
 `website` 폴더의 `index.html`을 브라우저로 열거나:
